@@ -1,0 +1,11 @@
+.top_header{
+    text-align: center;
+}
+.top_header ul li {
+    display: inline-block;
+    text-align: center;
+    padding-top: 00px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    font-weight: bold;
+}
