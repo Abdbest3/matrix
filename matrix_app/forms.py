@@ -4,7 +4,7 @@ from .models import dr_register,usr_register
 class doctor_r(ModelForm):
     class Meta:
         model = dr_register
-        fields = ['firstname' , 'lastname' ,'username', 'email','date','password1','password2' ,'myfile']
+        fields = ['firstname' , 'lastname' ,'username', 'email','date','password1','password2' ,'myfile','qualfication','field']
         widgets = {
             'firstname':forms.TextInput(attrs = {
                 'placeholder':'enter your firstname'
@@ -22,6 +22,12 @@ class doctor_r(ModelForm):
             'password2':forms.PasswordInput(attrs = {'placeholder':'confirm ur password'}),
             'email':forms.EmailInput(attrs = {'placeholder':'type ur valid email'}),
             'date':forms.DateInput(attrs = {'placeholder':'enter ur date of birth'}),
+            'qualfication':forms.TextInput(attrs = {
+                'placeholder':'enter your basic qualfication'
+                }),
+            'field':forms.TextInput(attrs = {
+                'placeholder':'enter your medical field'
+                })
         }
 class usr_r(ModelForm):
     class Meta:

@@ -17,32 +17,9 @@
 <link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
 </head>
 <body>
-<div class="super_container">
-	<div class="home">
-		
-		<!-- Home Slider -->
-		
-				<!-- Slide -->
-				
+<div class="container">
 
-				<!-- Slide -->
-				
-            
-				<!-- Slide -->
-				
-
-			</div>
-
-
-	<!-- Search -->
-
-	<div class="home_search">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="home_search_container">
-						<div class="home_search_title">search for doctor</div>
-						<div class="home_search_content">
+                          <div class="home_search_title">search for doctor</div>
 							<form action="#" class="home_search_form" id="home_search_form">
 								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
 									<input type="text" class="search_input search_input_1" placeholder="Name" required="required">
@@ -50,12 +27,7 @@
 									<button class="home_search_button">search</button>
 								</div>
 							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+						
 
 	<!-- Intro -->
 
@@ -70,20 +42,20 @@
 
                             <!-- Intro Item -->
                             {% for doctor in doctors %}
-							<div class="col-lg-6 intro_col">
+							<div class="col-lg-4 intro_col">
 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
-                                    
+                                  
 									<div class="intro_icon"><img src="{{ doctor.myfile.url }}" alt=""></div>
 									<div class="intro_content">
 										<div class="intro_title">
                                             <a href = '#' >{{ doctor.username }} </a></div>
-										<div class="intro_subtitle"><p>{{ doctor.email}}</p></div>
+                                        <div class="intro_subtitle"><p>{{ doctor.email}}</p></div>
+                                        <div class="intro_subtitle"><p>{{ doctor.qualfication}}</p></div>
+                                        <div class="intro_subtitle"><p>{{ doctor.field}}</p></div>
 									</div>
 								</div>
                             </div>
                             {% endfor %}
-
-
 						</div>
 					</div>
 				</div>		
@@ -415,7 +387,7 @@
 		</div>
 		<div class="col text-center">
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.  </div>
+ Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.  </div>
 	</footer> -->
 </div>
 

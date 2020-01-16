@@ -18,7 +18,7 @@ def home(request):
 def ulogin(request):
     if request.method == 'POST':
             if usr_register.objects.filter(user_name = request.POST['user_name'],password1 = request.POST['password1']):
-                return redirect("/")
+                return redirect("alldoctor/")
             else:
                 messages.info(request,"username or password not matched")
                 return redirect("/user-login/")
@@ -31,7 +31,7 @@ def ulogin(request):
 def dlogin(request):
     if request.method == 'POST':
             if dr_register.objects.filter(username = request.POST['username'],password1 = request.POST['password1']):
-                return redirect("alldoctor/")
+                return redirect("/")
             else:
                 messages.info(request,"username or password not matched")
                 return redirect("/doctor-login/")

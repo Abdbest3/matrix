@@ -18,3 +18,5 @@ class dr_register(models.Model):
     password1 = models.CharField(max_length=10)
     password2 = models.CharField(max_length=10)
     myfile = models.FileField(upload_to='dr/')
+    qualfication = models.CharField(max_length = 50,default = 'IOM')
+    field = models.CharField(max_length = 20 ,default = "Neurologist")
