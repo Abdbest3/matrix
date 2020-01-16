@@ -16,5 +16,6 @@ urlpatterns = [
     path('user-login/',views.ulogin,name = 'ulogin'),
     path('user-login/ulogin/',views.ulogin,name = 'ulogin1'),
     path('doctor-login/',views.dlogin,name='dlogin'),
-    path('doctor-login/dlogin/',views.dlogin,name='dlogin')
+    path('doctor-login/dlogin/',views.dlogin,name='dlogin'),
+    path('doctor-login/dlogin/alldoctor/',views.alldoctor,name='alldoctor'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -31,11 +31,10 @@ def ulogin(request):
 def dlogin(request):
     if request.method == 'POST':
             if dr_register.objects.filter(username = request.POST['username'],password1 = request.POST['password1']):
-                return redirect("/")
+                return redirect("alldoctor/")
             else:
                 messages.info(request,"username or password not matched")
                 return redirect("/doctor-login/")
-
     else:
         form = dr_login()
     return render(request,'d-login.html',{'forms':form})
@@ -66,9 +65,14 @@ def doctor_register(request):
     else:
         form = doctor_r()
     return render(request,'d-register.html',{'forms':form})
+def alldoctor(request):
+    alldoctor = dr_register.objects.all()
+    context = {
+        'doctors':alldoctor
+    }
+    return render(request,'alldoctor.html',context)
 
 def login(request):
-    
     return render(request,'login.html',{})
 def u_register(request):
     if request.method == 'POST':
